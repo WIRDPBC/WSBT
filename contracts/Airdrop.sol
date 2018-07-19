@@ -1,9 +1,9 @@
 pragma solidity ^0.4.24;
 
 import "../node_modules/openzeppelin-solidity/contracts/ownership/Ownable.sol";
-import "../node_modules/openzeppelin-solidity/contracts/token/ERC20/ERC20.sol";
+import "../node_modules/openzeppelin-solidity/contracts/ownership/CanReclaimToken.sol";
 
-contract Airdrop is Ownable {
+contract Airdrop is Ownable, CanReclaimToken {
   /**
    * @dev do Airdrop to address
    * @param _tokenAddr address the erc20 token address
